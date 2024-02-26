@@ -40,13 +40,18 @@ namespace AES
             for (int blockNum = 0; blockNum < numberOfBlocks; blockNum++)
             {
                 roundBytes = 0;
+                Attributes.PlaintextBlocks = plaintextBlocks;
+                counter = 0;
+                Attributes.RoundKey0 = new string[Attributes.PlaintextBlocks.Length]; 
+                foreach (Block block in Attributes.PlaintextBlocks)
+                {
+                    Attributes.RoundKey0[counter] = block.WriteBlock(block);
+                    counter++;
+                }
+                
                 // Add round key 1
                 Array.Copy(Attributes.ExpandedKey, roundBytes, roundArray, 0, 16); // source, index, destination, length
                 plaintextBlocks[blockNum] = func.AddRoundKey(plaintextBlocks[blockNum], roundArray);
-                foreach (Block block in plaintextBlocks)
-                {
-                    round0 += block.WriteBlock(block);
-                }
                 for (int round = 1; round < 10; round++) // 9 rounds
                 {
                     // Sub bytes    
