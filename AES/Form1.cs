@@ -15,7 +15,7 @@ namespace AES
         private Format format;
         private Encrypt encrypt;
         private bool keyInStringFormat;
-        private Details detailsForm;
+        private Round0 round0;
         private string text;
         public Main()
         {
@@ -23,7 +23,6 @@ namespace AES
             format = new Format();
             keyInStringFormat = true;
             encrypt = new Encrypt();
-            detailsForm = new Details();
         }
 
         private void button_encrypt_Click(object sender, EventArgs e)
@@ -72,15 +71,13 @@ namespace AES
 
         private void button_round0_Click(object sender, EventArgs e)
         {
-            text = "This isn't really a round, but each state matrix is XORed with round key 0:\n";
-            text += encrypt.round0;
-            detailsForm.label_detailsForm.Text = text;
-            detailsForm.label_detailsForm.BringToFront();
-            detailsForm.Show();
+            round0 = new Round0();
+            round0.Show();
         }
 
         private void button_keyExpansion_Click(object sender, EventArgs e)
         {
+            /*detailsForm = new Details();
             text = $"Key: {BitConverter.ToString(Attributes.Key).Replace("-", "")}\n";
 
             List<string> chunks = Enumerable.Range(0, BitConverter.ToString(Attributes.ExpandedKey).Replace("-", "").Length / 32)
@@ -90,8 +87,8 @@ namespace AES
                 text += $"Round {i}: {chunks[i]}\n";
             }
 
-            detailsForm.label_detailsForm.Text = text;
-            detailsForm.Show();
+            detailsForm.label_stateMatrixValue.Text = text;
+            detailsForm.Show();*/
         }
     }
     
