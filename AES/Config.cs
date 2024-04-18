@@ -27,7 +27,7 @@ namespace AES
             {
                 hb.AppendFormat("{0:x2}", b);
             }
-            label_plaintextBytesText.Text = hb.ToString();
+            label_plaintextBytesText.Text = Regex.Replace(hb.ToString(), ".{16}", "$0\n\n");
 
             hb = new StringBuilder(Attributes.Key.Length * 2);
             foreach (byte b in Attributes.Key)
@@ -43,6 +43,12 @@ namespace AES
             }
             
             label_keyExpansionText.Text = Regex.Replace(hb.ToString(), ".{32}", "$0\n\n");
+
+            label_plaintextBlocksText.Text = "";
+            foreach (Block b in Attributes.PlaintextBlocksOriginal)
+            {
+                label_plaintextBlocksText.Text += block.WriteBlock(b);
+            }
         }
     }
 }

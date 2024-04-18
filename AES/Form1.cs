@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,11 +58,17 @@ namespace AES
                     } else
                     {
                         Attributes.Key = format.ConvertByteKeyToBytes(textBox_key.Text.Replace(" ", ""));
+
+                        var sw = new Stopwatch();
+                        sw.Start();
                         // Perform encryption
                         encrypt.encrypt();
 
+
                         // Write ciphertext
                         label_ciphertextAnswer.Text = encrypt.WriteBlocks();
+                        sw.Stop();
+                        label_timeTaken.Text = $"Time taken: {sw.ElapsedMilliseconds} ms";
                     }       
                 }
                 else
@@ -72,11 +79,17 @@ namespace AES
                     } else
                     {
                         Attributes.Key = format.ConvertStringKeyToBytes(textBox_key.Text);
+
+                        var sw = new Stopwatch();
+                        sw.Start();
                         // Perform encryption
                         encrypt.encrypt();
 
+
                         // Write ciphertext
                         label_ciphertextAnswer.Text = encrypt.WriteBlocks();
+                        sw.Stop();
+                        label_timeTaken.Text = $"Time taken: {sw.ElapsedMilliseconds} ms";
                     }
                 }
             }

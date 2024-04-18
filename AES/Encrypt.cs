@@ -39,7 +39,7 @@ namespace AES
 
         // Fill blocks
         FillBlocks();
-        Attributes.PlaintextBlocksOriginal = plaintextBlocks;
+        
 
             // For each block
             for (int blockNum = 0; blockNum < numberOfBlocks; blockNum++)
@@ -168,7 +168,7 @@ namespace AES
             // FIX THIS IN THE FUTURE, REMOVE ENCRYPT.NUMBEROFBLOCKS AND JUST HAVE ATTRIBUTES.NOB !!
             Attributes.NumberOfBlocks = numberOfBlocks;
             plaintextBlocks = new Block[numberOfBlocks];
-
+            Attributes.PlaintextBlocksOriginal = new Block[numberOfBlocks];
             // Fill each block
             counter = 0;
             for (int i = 0; i < plaintextBlocks.Length; i++)
@@ -182,6 +182,7 @@ namespace AES
                 Array.Copy(Attributes.PlaintextBytes, counter, plaintextBytesSliced, 0, Attributes.PlaintextBytes.Length - counter);
 
                 plaintextBlocks[i] = new Block(plaintextBytesSliced);
+                Attributes.PlaintextBlocksOriginal[i] = new Block(plaintextBytesSliced);
                 counter += 16;
             }
         }

@@ -49,6 +49,7 @@
             this.button_round9 = new System.Windows.Forms.Button();
             this.button_round0 = new System.Windows.Forms.Button();
             this.button_config = new System.Windows.Forms.Button();
+            this.label_timeTaken = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_plaintext
@@ -251,11 +252,21 @@
             this.button_config.UseVisualStyleBackColor = true;
             this.button_config.Click += new System.EventHandler(this.button_config_Click);
             // 
+            // label_timeTaken
+            // 
+            this.label_timeTaken.AutoSize = true;
+            this.label_timeTaken.Location = new System.Drawing.Point(316, 238);
+            this.label_timeTaken.Name = "label_timeTaken";
+            this.label_timeTaken.Size = new System.Drawing.Size(63, 13);
+            this.label_timeTaken.TabIndex = 23;
+            this.label_timeTaken.Text = "Time taken:";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1289, 817);
+            this.Controls.Add(this.label_timeTaken);
             this.Controls.Add(this.button_config);
             this.Controls.Add(this.button_round0);
             this.Controls.Add(this.button_round9);
@@ -307,6 +318,7 @@
         private System.Windows.Forms.Button button_round9;
         private System.Windows.Forms.Button button_round0;
         private System.Windows.Forms.Button button_config;
+        private System.Windows.Forms.Label label_timeTaken;
     }
 }
 

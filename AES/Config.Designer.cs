@@ -36,6 +36,8 @@
             this.label_plaintextBytesText = new System.Windows.Forms.Label();
             this.label_keyBytesText = new System.Windows.Forms.Label();
             this.label_keyExpansionText = new System.Windows.Forms.Label();
+            this.label_plaintextBlocksTitle = new System.Windows.Forms.Label();
+            this.label_plaintextBlocksText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_plaintextStringTitle
@@ -50,7 +52,7 @@
             // label_plaintextBytesTitle
             // 
             this.label_plaintextBytesTitle.AutoSize = true;
-            this.label_plaintextBytesTitle.Location = new System.Drawing.Point(380, 43);
+            this.label_plaintextBytesTitle.Location = new System.Drawing.Point(380, 128);
             this.label_plaintextBytesTitle.Name = "label_plaintextBytesTitle";
             this.label_plaintextBytesTitle.Size = new System.Drawing.Size(89, 13);
             this.label_plaintextBytesTitle.TabIndex = 1;
@@ -68,7 +70,7 @@
             // label_keyBytesTitle
             // 
             this.label_keyBytesTitle.AutoSize = true;
-            this.label_keyBytesTitle.Location = new System.Drawing.Point(380, 69);
+            this.label_keyBytesTitle.Location = new System.Drawing.Point(380, 48);
             this.label_keyBytesTitle.Name = "label_keyBytesTitle";
             this.label_keyBytesTitle.Size = new System.Drawing.Size(67, 13);
             this.label_keyBytesTitle.TabIndex = 3;
@@ -86,7 +88,7 @@
             // label_plaintextBytesText
             // 
             this.label_plaintextBytesText.AutoSize = true;
-            this.label_plaintextBytesText.Location = new System.Drawing.Point(484, 43);
+            this.label_plaintextBytesText.Location = new System.Drawing.Point(484, 128);
             this.label_plaintextBytesText.Name = "label_plaintextBytesText";
             this.label_plaintextBytesText.Size = new System.Drawing.Size(35, 13);
             this.label_plaintextBytesText.TabIndex = 5;
@@ -95,7 +97,7 @@
             // label_keyBytesText
             // 
             this.label_keyBytesText.AutoSize = true;
-            this.label_keyBytesText.Location = new System.Drawing.Point(484, 69);
+            this.label_keyBytesText.Location = new System.Drawing.Point(484, 48);
             this.label_keyBytesText.Name = "label_keyBytesText";
             this.label_keyBytesText.Size = new System.Drawing.Size(35, 13);
             this.label_keyBytesText.TabIndex = 6;
@@ -110,11 +112,31 @@
             this.label_keyExpansionText.TabIndex = 7;
             this.label_keyExpansionText.Text = "label4";
             // 
+            // label_plaintextBlocksTitle
+            // 
+            this.label_plaintextBlocksTitle.AutoSize = true;
+            this.label_plaintextBlocksTitle.Location = new System.Drawing.Point(380, 216);
+            this.label_plaintextBlocksTitle.Name = "label_plaintextBlocksTitle";
+            this.label_plaintextBlocksTitle.Size = new System.Drawing.Size(95, 13);
+            this.label_plaintextBlocksTitle.TabIndex = 8;
+            this.label_plaintextBlocksTitle.Text = "Plaintext in blocks:";
+            // 
+            // label_plaintextBlocksText
+            // 
+            this.label_plaintextBlocksText.AutoSize = true;
+            this.label_plaintextBlocksText.Location = new System.Drawing.Point(487, 216);
+            this.label_plaintextBlocksText.Name = "label_plaintextBlocksText";
+            this.label_plaintextBlocksText.Size = new System.Drawing.Size(35, 13);
+            this.label_plaintextBlocksText.TabIndex = 9;
+            this.label_plaintextBlocksText.Text = "label2";
+            // 
             // Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label_plaintextBlocksText);
+            this.Controls.Add(this.label_plaintextBlocksTitle);
             this.Controls.Add(this.label_keyExpansionText);
             this.Controls.Add(this.label_keyBytesText);
             this.Controls.Add(this.label_plaintextBytesText);
@@ -140,5 +162,7 @@
         private System.Windows.Forms.Label label_plaintextBytesText;
         private System.Windows.Forms.Label label_keyBytesText;
         private System.Windows.Forms.Label label_keyExpansionText;
+        private System.Windows.Forms.Label label_plaintextBlocksTitle;
+        private System.Windows.Forms.Label label_plaintextBlocksText;
     }
 }
