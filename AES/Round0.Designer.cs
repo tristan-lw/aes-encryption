@@ -28,111 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_addRoundKey = new System.Windows.Forms.Button();
-            this.button_back = new System.Windows.Forms.Button();
-            this.button_next = new System.Windows.Forms.Button();
-            this.label_stateMatrixText = new System.Windows.Forms.Label();
-            this.label_stateMatrixValue = new System.Windows.Forms.Label();
-            this.label_additionSymbol = new System.Windows.Forms.Label();
-            this.label_roundKeyText = new System.Windows.Forms.Label();
-            this.label_roundKeyValue = new System.Windows.Forms.Label();
+            this.label_subBytesTitle = new System.Windows.Forms.Label();
+            this.label_shiftRowsTitle = new System.Windows.Forms.Label();
+            this.label_mixColumnsTitle = new System.Windows.Forms.Label();
+            this.label_addRoundKeyTitle = new System.Windows.Forms.Label();
+            this.label_subBytesText = new System.Windows.Forms.Label();
+            this.label_shiftRowsText = new System.Windows.Forms.Label();
+            this.label_addRoundKeyText = new System.Windows.Forms.Label();
+            this.label_mixColumnsText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button_addRoundKey
+            // label_subBytesTitle
             // 
-            this.button_addRoundKey.Location = new System.Drawing.Point(81, 42);
-            this.button_addRoundKey.Name = "button_addRoundKey";
-            this.button_addRoundKey.Size = new System.Drawing.Size(136, 23);
-            this.button_addRoundKey.TabIndex = 2;
-            this.button_addRoundKey.Text = "Add round key";
-            this.button_addRoundKey.UseVisualStyleBackColor = true;
-            this.button_addRoundKey.Click += new System.EventHandler(this.button_addRoundKey_Click);
+            this.label_subBytesTitle.AutoSize = true;
+            this.label_subBytesTitle.Location = new System.Drawing.Point(75, 64);
+            this.label_subBytesTitle.Name = "label_subBytesTitle";
+            this.label_subBytesTitle.Size = new System.Drawing.Size(55, 13);
+            this.label_subBytesTitle.TabIndex = 0;
+            this.label_subBytesTitle.Text = "Sub Bytes";
             // 
-            // button_back
+            // label_shiftRowsTitle
             // 
-            this.button_back.Location = new System.Drawing.Point(81, 335);
-            this.button_back.Name = "button_back";
-            this.button_back.Size = new System.Drawing.Size(75, 23);
-            this.button_back.TabIndex = 3;
-            this.button_back.Text = "Back";
-            this.button_back.UseVisualStyleBackColor = true;
-            this.button_back.Visible = false;
-            this.button_back.Click += new System.EventHandler(this.button_back_Click);
+            this.label_shiftRowsTitle.AutoSize = true;
+            this.label_shiftRowsTitle.Location = new System.Drawing.Point(251, 64);
+            this.label_shiftRowsTitle.Name = "label_shiftRowsTitle";
+            this.label_shiftRowsTitle.Size = new System.Drawing.Size(58, 13);
+            this.label_shiftRowsTitle.TabIndex = 1;
+            this.label_shiftRowsTitle.Text = "Shift Rows";
             // 
-            // button_next
+            // label_mixColumnsTitle
             // 
-            this.button_next.Location = new System.Drawing.Point(467, 335);
-            this.button_next.Name = "button_next";
-            this.button_next.Size = new System.Drawing.Size(75, 23);
-            this.button_next.TabIndex = 4;
-            this.button_next.Text = "Next";
-            this.button_next.UseVisualStyleBackColor = true;
-            this.button_next.Visible = false;
-            this.button_next.Click += new System.EventHandler(this.button_next_Click);
+            this.label_mixColumnsTitle.AutoSize = true;
+            this.label_mixColumnsTitle.Location = new System.Drawing.Point(446, 64);
+            this.label_mixColumnsTitle.Name = "label_mixColumnsTitle";
+            this.label_mixColumnsTitle.Size = new System.Drawing.Size(66, 13);
+            this.label_mixColumnsTitle.TabIndex = 2;
+            this.label_mixColumnsTitle.Text = "Mix Columns";
             // 
-            // label_stateMatrixText
+            // label_addRoundKeyTitle
             // 
-            this.label_stateMatrixText.AutoSize = true;
-            this.label_stateMatrixText.Location = new System.Drawing.Point(131, 131);
-            this.label_stateMatrixText.Name = "label_stateMatrixText";
-            this.label_stateMatrixText.Size = new System.Drawing.Size(81, 13);
-            this.label_stateMatrixText.TabIndex = 5;
-            this.label_stateMatrixText.Text = "StateMatrixText";
-            this.label_stateMatrixText.Visible = false;
+            this.label_addRoundKeyTitle.AutoSize = true;
+            this.label_addRoundKeyTitle.Location = new System.Drawing.Point(621, 64);
+            this.label_addRoundKeyTitle.Name = "label_addRoundKeyTitle";
+            this.label_addRoundKeyTitle.Size = new System.Drawing.Size(82, 13);
+            this.label_addRoundKeyTitle.TabIndex = 3;
+            this.label_addRoundKeyTitle.Text = "Add Round Key";
             // 
-            // label_stateMatrixValue
+            // label_subBytesText
             // 
-            this.label_stateMatrixValue.AutoSize = true;
-            this.label_stateMatrixValue.Location = new System.Drawing.Point(131, 208);
-            this.label_stateMatrixValue.Name = "label_stateMatrixValue";
-            this.label_stateMatrixValue.Size = new System.Drawing.Size(87, 13);
-            this.label_stateMatrixValue.TabIndex = 6;
-            this.label_stateMatrixValue.Text = "StateMatrixValue";
-            this.label_stateMatrixValue.Visible = false;
+            this.label_subBytesText.AutoSize = true;
+            this.label_subBytesText.Location = new System.Drawing.Point(75, 122);
+            this.label_subBytesText.Name = "label_subBytesText";
+            this.label_subBytesText.Size = new System.Drawing.Size(55, 13);
+            this.label_subBytesText.TabIndex = 4;
+            this.label_subBytesText.Text = "Sub Bytes";
             // 
-            // label_additionSymbol
+            // label_shiftRowsText
             // 
-            this.label_additionSymbol.AutoSize = true;
-            this.label_additionSymbol.Location = new System.Drawing.Point(277, 175);
-            this.label_additionSymbol.Name = "label_additionSymbol";
-            this.label_additionSymbol.Size = new System.Drawing.Size(13, 13);
-            this.label_additionSymbol.TabIndex = 7;
-            this.label_additionSymbol.Text = "+";
-            this.label_additionSymbol.Visible = false;
+            this.label_shiftRowsText.AutoSize = true;
+            this.label_shiftRowsText.Location = new System.Drawing.Point(242, 122);
+            this.label_shiftRowsText.Name = "label_shiftRowsText";
+            this.label_shiftRowsText.Size = new System.Drawing.Size(58, 13);
+            this.label_shiftRowsText.TabIndex = 5;
+            this.label_shiftRowsText.Text = "Shift Rows";
             // 
-            // label_roundKeyText
+            // label_addRoundKeyText
             // 
-            this.label_roundKeyText.AutoSize = true;
-            this.label_roundKeyText.Location = new System.Drawing.Point(328, 131);
-            this.label_roundKeyText.Name = "label_roundKeyText";
-            this.label_roundKeyText.Size = new System.Drawing.Size(78, 13);
-            this.label_roundKeyText.TabIndex = 8;
-            this.label_roundKeyText.Text = "RoundKeyText";
-            this.label_roundKeyText.Visible = false;
+            this.label_addRoundKeyText.AutoSize = true;
+            this.label_addRoundKeyText.Location = new System.Drawing.Point(621, 122);
+            this.label_addRoundKeyText.Name = "label_addRoundKeyText";
+            this.label_addRoundKeyText.Size = new System.Drawing.Size(82, 13);
+            this.label_addRoundKeyText.TabIndex = 6;
+            this.label_addRoundKeyText.Text = "Add Round Key";
             // 
-            // label_roundKeyValue
+            // label_mixColumnsText
             // 
-            this.label_roundKeyValue.AutoSize = true;
-            this.label_roundKeyValue.Location = new System.Drawing.Point(328, 208);
-            this.label_roundKeyValue.Name = "label_roundKeyValue";
-            this.label_roundKeyValue.Size = new System.Drawing.Size(84, 13);
-            this.label_roundKeyValue.TabIndex = 9;
-            this.label_roundKeyValue.Text = "RoundKeyValue";
-            this.label_roundKeyValue.Visible = false;
+            this.label_mixColumnsText.AutoSize = true;
+            this.label_mixColumnsText.Location = new System.Drawing.Point(456, 122);
+            this.label_mixColumnsText.Name = "label_mixColumnsText";
+            this.label_mixColumnsText.Size = new System.Drawing.Size(66, 13);
+            this.label_mixColumnsText.TabIndex = 7;
+            this.label_mixColumnsText.Text = "Mix Columns";
             // 
             // Round0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label_roundKeyValue);
-            this.Controls.Add(this.label_roundKeyText);
-            this.Controls.Add(this.label_additionSymbol);
-            this.Controls.Add(this.label_stateMatrixValue);
-            this.Controls.Add(this.label_stateMatrixText);
-            this.Controls.Add(this.button_next);
-            this.Controls.Add(this.button_back);
-            this.Controls.Add(this.button_addRoundKey);
+            this.Controls.Add(this.label_mixColumnsText);
+            this.Controls.Add(this.label_addRoundKeyText);
+            this.Controls.Add(this.label_shiftRowsText);
+            this.Controls.Add(this.label_subBytesText);
+            this.Controls.Add(this.label_addRoundKeyTitle);
+            this.Controls.Add(this.label_mixColumnsTitle);
+            this.Controls.Add(this.label_shiftRowsTitle);
+            this.Controls.Add(this.label_subBytesTitle);
             this.Name = "Round0";
             this.Text = "Round0";
             this.ResumeLayout(false);
@@ -142,13 +132,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button_addRoundKey;
-        private System.Windows.Forms.Button button_back;
-        private System.Windows.Forms.Button button_next;
-        private System.Windows.Forms.Label label_stateMatrixText;
-        internal System.Windows.Forms.Label label_stateMatrixValue;
-        private System.Windows.Forms.Label label_additionSymbol;
-        private System.Windows.Forms.Label label_roundKeyText;
-        private System.Windows.Forms.Label label_roundKeyValue;
+        private System.Windows.Forms.Label label_subBytesTitle;
+        private System.Windows.Forms.Label label_shiftRowsTitle;
+        private System.Windows.Forms.Label label_mixColumnsTitle;
+        private System.Windows.Forms.Label label_addRoundKeyTitle;
+        private System.Windows.Forms.Label label_subBytesText;
+        private System.Windows.Forms.Label label_shiftRowsText;
+        private System.Windows.Forms.Label label_addRoundKeyText;
+        private System.Windows.Forms.Label label_mixColumnsText;
     }
 }

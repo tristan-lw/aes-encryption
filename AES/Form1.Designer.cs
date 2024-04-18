@@ -48,8 +48,6 @@
             this.button_round8 = new System.Windows.Forms.Button();
             this.button_round9 = new System.Windows.Forms.Button();
             this.button_round0 = new System.Windows.Forms.Button();
-            this.button_round10 = new System.Windows.Forms.Button();
-            this.button_keyExpansion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_plaintext
@@ -98,9 +96,8 @@
             this.label_ciphertextAnswer.AutoSize = true;
             this.label_ciphertextAnswer.Location = new System.Drawing.Point(148, 332);
             this.label_ciphertextAnswer.Name = "label_ciphertextAnswer";
-            this.label_ciphertextAnswer.Size = new System.Drawing.Size(35, 13);
+            this.label_ciphertextAnswer.Size = new System.Drawing.Size(0, 13);
             this.label_ciphertextAnswer.TabIndex = 5;
-            this.label_ciphertextAnswer.Text = "label1";
             // 
             // button_encrypt
             // 
@@ -145,88 +142,97 @@
             // 
             // button_round1
             // 
-            this.button_round1.Location = new System.Drawing.Point(727, 132);
+            this.button_round1.Location = new System.Drawing.Point(856, 184);
             this.button_round1.Name = "button_round1";
             this.button_round1.Size = new System.Drawing.Size(75, 23);
             this.button_round1.TabIndex = 12;
             this.button_round1.Text = "Round 1";
             this.button_round1.UseVisualStyleBackColor = true;
+            this.button_round1.Click += new System.EventHandler(this.button_round1_Click);
             // 
             // button_round2
             // 
-            this.button_round2.Location = new System.Drawing.Point(727, 174);
+            this.button_round2.Location = new System.Drawing.Point(937, 184);
             this.button_round2.Name = "button_round2";
             this.button_round2.Size = new System.Drawing.Size(75, 23);
             this.button_round2.TabIndex = 13;
             this.button_round2.Text = "Round 2";
             this.button_round2.UseVisualStyleBackColor = true;
+            this.button_round2.Click += new System.EventHandler(this.button_round2_Click);
             // 
             // button_round3
             // 
-            this.button_round3.Location = new System.Drawing.Point(727, 224);
+            this.button_round3.Location = new System.Drawing.Point(1018, 184);
             this.button_round3.Name = "button_round3";
             this.button_round3.Size = new System.Drawing.Size(75, 23);
             this.button_round3.TabIndex = 14;
             this.button_round3.Text = "Round 3";
             this.button_round3.UseVisualStyleBackColor = true;
+            this.button_round3.Click += new System.EventHandler(this.button_round3_Click);
             // 
             // button_round4
             // 
-            this.button_round4.Location = new System.Drawing.Point(727, 273);
+            this.button_round4.Location = new System.Drawing.Point(856, 213);
             this.button_round4.Name = "button_round4";
             this.button_round4.Size = new System.Drawing.Size(75, 23);
             this.button_round4.TabIndex = 15;
             this.button_round4.Text = "Round 4";
             this.button_round4.UseVisualStyleBackColor = true;
+            this.button_round4.Click += new System.EventHandler(this.button_round4_Click);
             // 
             // button_round5
             // 
-            this.button_round5.Location = new System.Drawing.Point(727, 327);
+            this.button_round5.Location = new System.Drawing.Point(937, 213);
             this.button_round5.Name = "button_round5";
             this.button_round5.Size = new System.Drawing.Size(75, 23);
             this.button_round5.TabIndex = 16;
             this.button_round5.Text = "Round 5";
             this.button_round5.UseVisualStyleBackColor = true;
+            this.button_round5.Click += new System.EventHandler(this.button_round5_Click);
             // 
             // button_round6
             // 
-            this.button_round6.Location = new System.Drawing.Point(727, 376);
+            this.button_round6.Location = new System.Drawing.Point(1018, 213);
             this.button_round6.Name = "button_round6";
             this.button_round6.Size = new System.Drawing.Size(75, 23);
             this.button_round6.TabIndex = 17;
             this.button_round6.Text = "Round 6";
             this.button_round6.UseVisualStyleBackColor = true;
+            this.button_round6.Click += new System.EventHandler(this.button_round6_Click);
             // 
             // button_round7
             // 
-            this.button_round7.Location = new System.Drawing.Point(745, 420);
+            this.button_round7.Location = new System.Drawing.Point(856, 242);
             this.button_round7.Name = "button_round7";
             this.button_round7.Size = new System.Drawing.Size(75, 23);
             this.button_round7.TabIndex = 18;
             this.button_round7.Text = "Round 7";
             this.button_round7.UseVisualStyleBackColor = true;
+            this.button_round7.Click += new System.EventHandler(this.button_round7_Click);
             // 
             // button_round8
             // 
-            this.button_round8.Location = new System.Drawing.Point(745, 463);
+            this.button_round8.Location = new System.Drawing.Point(937, 242);
             this.button_round8.Name = "button_round8";
             this.button_round8.Size = new System.Drawing.Size(75, 23);
             this.button_round8.TabIndex = 19;
             this.button_round8.Text = "Round 8";
             this.button_round8.UseVisualStyleBackColor = true;
+            this.button_round8.Click += new System.EventHandler(this.button_round8_Click);
             // 
             // button_round9
             // 
-            this.button_round9.Location = new System.Drawing.Point(745, 503);
+            this.button_round9.Location = new System.Drawing.Point(1018, 242);
             this.button_round9.Name = "button_round9";
             this.button_round9.Size = new System.Drawing.Size(75, 23);
             this.button_round9.TabIndex = 20;
             this.button_round9.Text = "Round 9";
             this.button_round9.UseVisualStyleBackColor = true;
+            this.button_round9.Click += new System.EventHandler(this.button_round9_Click);
             // 
             // button_round0
             // 
-            this.button_round0.Location = new System.Drawing.Point(727, 80);
+            this.button_round0.Location = new System.Drawing.Point(856, 155);
             this.button_round0.Name = "button_round0";
             this.button_round0.Size = new System.Drawing.Size(75, 23);
             this.button_round0.TabIndex = 21;
@@ -234,32 +240,11 @@
             this.button_round0.UseVisualStyleBackColor = true;
             this.button_round0.Click += new System.EventHandler(this.button_round0_Click);
             // 
-            // button_round10
-            // 
-            this.button_round10.Location = new System.Drawing.Point(745, 553);
-            this.button_round10.Name = "button_round10";
-            this.button_round10.Size = new System.Drawing.Size(75, 23);
-            this.button_round10.TabIndex = 22;
-            this.button_round10.Text = "Round 10";
-            this.button_round10.UseVisualStyleBackColor = true;
-            // 
-            // button_keyExpansion
-            // 
-            this.button_keyExpansion.Location = new System.Drawing.Point(715, 36);
-            this.button_keyExpansion.Name = "button_keyExpansion";
-            this.button_keyExpansion.Size = new System.Drawing.Size(87, 23);
-            this.button_keyExpansion.TabIndex = 23;
-            this.button_keyExpansion.Text = "Key Expansion";
-            this.button_keyExpansion.UseVisualStyleBackColor = true;
-            this.button_keyExpansion.Click += new System.EventHandler(this.button_keyExpansion_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1289, 817);
-            this.Controls.Add(this.button_keyExpansion);
-            this.Controls.Add(this.button_round10);
             this.Controls.Add(this.button_round0);
             this.Controls.Add(this.button_round9);
             this.Controls.Add(this.button_round8);
@@ -309,8 +294,6 @@
         private System.Windows.Forms.Button button_round8;
         private System.Windows.Forms.Button button_round9;
         private System.Windows.Forms.Button button_round0;
-        private System.Windows.Forms.Button button_round10;
-        private System.Windows.Forms.Button button_keyExpansion;
     }
 }
 

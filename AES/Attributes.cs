@@ -15,5 +15,13 @@ namespace AES
         internal static Block[] PlaintextBlocks { get; set; }
         internal static string[] RoundKey0 { get; set; }
         internal static string[] ExpandedKeyBlocksString { get; set; }
+        internal static int NumberOfBlocks { get; set; }
+        internal static string SubBytes { get; set; }
+        internal static string ShiftRows { get; set; }
+        internal static string MixColumns { get; set; }
+        internal static string AddRoundKey { get; set; }
+        
+
+
     }
 }

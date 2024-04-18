@@ -10,16 +10,14 @@ using System.Windows.Forms;
 
 namespace AES
 {
-    public partial class Round0 : Form
+    public partial class Round1 : Form
     {
-
-        public Round0()
+        public Round1()
         {
             InitializeComponent();
 
-            int startPos = 0;
-            int length = 54 * Attributes.NumberOfBlocks; // 54 is how many characters 1 block takes up
-
+            int startPos = 54 * Attributes.NumberOfBlocks;
+            int length = 54 * Attributes.NumberOfBlocks;
             label_subBytesText.Text = Attributes.SubBytes.Substring(startPos, length);
             label_shiftRowsText.Text = Attributes.ShiftRows.Substring(startPos, length);
             label_mixColumnsText.Text = Attributes.MixColumns.Substring(startPos, length);

@@ -66,6 +66,60 @@
     <Compile Include="Round0.Designer.cs">
       <DependentUpon>Round0.cs</DependentUpon>
     </Compile>
+    <Compile Include="Round1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Round1.Designer.cs">
+      <DependentUpon>Round1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Round2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Round2.Designer.cs">
+      <DependentUpon>Round2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Round3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Round3.Designer.cs">
+      <DependentUpon>Round3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Round4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Round4.Designer.cs">
+      <DependentUpon>Round4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Round5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Round5.Designer.cs">
+      <DependentUpon>Round5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Round6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Round6.Designer.cs">
+      <DependentUpon>Round6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Round7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Round7.Designer.cs">
+      <DependentUpon>Round7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Round8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Round8.Designer.cs">
+      <DependentUpon>Round8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Round9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Round9.Designer.cs">
+      <DependentUpon>Round9.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +134,33 @@
     </Compile>
     <EmbeddedResource Include="Round0.resx">
       <DependentUpon>Round0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Round1.resx">
+      <DependentUpon>Round1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Round2.resx">
+      <DependentUpon>Round2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Round3.resx">
+      <DependentUpon>Round3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Round4.resx">
+      <DependentUpon>Round4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Round5.resx">
+      <DependentUpon>Round5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Round6.resx">
+      <DependentUpon>Round6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Round7.resx">
+      <DependentUpon>Round7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Round8.resx">
+      <DependentUpon>Round8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Round9.resx">
+      <DependentUpon>Round9.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

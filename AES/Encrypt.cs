@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,6 @@ namespace AES
         private static int counter;
         private static byte[] plaintextBytesSliced;
         private string blockString;
-        internal string round0 { get; set; }
 
         internal Encrypt()
         {
@@ -26,7 +26,6 @@ namespace AES
             func = new Functions();
             roundArray = new byte[16];
             blockString = "";
-            round0 = "";
         }
         internal void encrypt()
         {
@@ -62,9 +61,18 @@ namespace AES
                             plaintextBlocks[blockNum][i, j] = func.ApplySbox(plaintextBlocks[blockNum][i, j]);
                         }
                     }
+                    foreach (Block block in plaintextBlocks)
+                    {
+                        Attributes.SubBytes += block.WriteBlock(block);
+                    }
+                    //File.WriteAllText("C:\\Users\\Tristan\\source\\repos\\aes-encryption\\subbytes.txt", Attributes.SubBytes);
 
                     // Shift rows
                     plaintextBlocks[blockNum] = func.ShiftRows(plaintextBlocks[blockNum], 0);
+                    foreach (Block block in plaintextBlocks)
+                    {
+                        Attributes.ShiftRows += block.WriteBlock(block);
+                    }
 
                     // Mix columns
                     column = new byte[4];
@@ -82,11 +90,20 @@ namespace AES
                             plaintextBlocks[blockNum][a, i] = column[i];
                         }
                     }
+                    foreach (Block block in plaintextBlocks)
+                    {
+                        Attributes.MixColumns += block.WriteBlock(block);
+                    }
 
                     // Add round key
                     roundBytes += 16;
                     Array.Copy(Attributes.ExpandedKey, roundBytes, roundArray, 0, 16);
                     plaintextBlocks[blockNum] = func.AddRoundKey(plaintextBlocks[blockNum], roundArray);
+
+                    foreach (Block block in plaintextBlocks)
+                    {
+                        Attributes.AddRoundKey += block.WriteBlock(block);
+                    }
                 }
 
                 // Final round
@@ -99,14 +116,26 @@ namespace AES
                         plaintextBlocks[blockNum][i, j] = func.ApplySbox(plaintextBlocks[blockNum][i, j]);
                     }
                 }
+                foreach (Block block in plaintextBlocks)
+                {
+                    Attributes.SubBytes += block.WriteBlock(block);
+                }
 
                 // Shift Rows
                 plaintextBlocks[blockNum] = func.ShiftRows(plaintextBlocks[blockNum], 0);
+                foreach (Block block in plaintextBlocks)
+                {
+                    Attributes.ShiftRows += block.WriteBlock(block);
+                }
 
                 // Add round key
                 roundBytes += 16;
                 Array.Copy(Attributes.ExpandedKey, roundBytes, roundArray, 0, 16);
                 plaintextBlocks[blockNum] = func.AddRoundKey(plaintextBlocks[blockNum], roundArray);
+                foreach (Block block in plaintextBlocks)
+                {
+                    Attributes.AddRoundKey += block.WriteBlock(block);
+                }
             }
             foreach (Block block in plaintextBlocks)
             {
@@ -130,6 +159,8 @@ namespace AES
             {
                 numberOfBlocks += 1;
             }
+            // FIX THIS IN THE FUTURE, REMOVE ENCRYPT.NUMBEROFBLOCKS AND JUST HAVE ATTRIBUTES.NOB !!
+            Attributes.NumberOfBlocks = numberOfBlocks;
             plaintextBlocks = new Block[numberOfBlocks];
 
             // Fill each block
