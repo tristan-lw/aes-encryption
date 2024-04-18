@@ -25,12 +25,17 @@ namespace AES
             KE = new KeyExpansion();
             func = new Functions();
             roundArray = new byte[16];
-            blockString = "";
         }
         internal void encrypt()
         {
-            // Perform key expansion
-            KE.Expand(Attributes.Key);
+            blockString = "";
+            Attributes.SubBytes = "";
+            Attributes.ShiftRows = "";
+            Attributes.MixColumns = "";
+            Attributes.AddRoundKey = "";
+          
+        // Perform key expansion
+        KE.Expand(Attributes.Key);
 
             // Fill blocks
             FillBlocks();
