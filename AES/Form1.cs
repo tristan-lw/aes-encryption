@@ -15,6 +15,7 @@ namespace AES
         private Format format;
         private Encrypt encrypt;
         private bool keyInStringFormat;
+        private Config config;
         private Round0 round0;
         private Round1 round1;
         private Round2 round2;
@@ -143,6 +144,12 @@ namespace AES
         {
             round9 = new Round9();
             round9.Show();
+        }
+
+        private void button_config_Click(object sender, EventArgs e)
+        {
+            config = new Config();
+            config.Show();
         }
     }
     

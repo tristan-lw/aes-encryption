@@ -48,6 +48,7 @@
             this.button_round8 = new System.Windows.Forms.Button();
             this.button_round9 = new System.Windows.Forms.Button();
             this.button_round0 = new System.Windows.Forms.Button();
+            this.button_config = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_plaintext
@@ -240,11 +241,22 @@
             this.button_round0.UseVisualStyleBackColor = true;
             this.button_round0.Click += new System.EventHandler(this.button_round0_Click);
             // 
+            // button_config
+            // 
+            this.button_config.Location = new System.Drawing.Point(856, 126);
+            this.button_config.Name = "button_config";
+            this.button_config.Size = new System.Drawing.Size(75, 23);
+            this.button_config.TabIndex = 22;
+            this.button_config.Text = "Config";
+            this.button_config.UseVisualStyleBackColor = true;
+            this.button_config.Click += new System.EventHandler(this.button_config_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1289, 817);
+            this.Controls.Add(this.button_config);
             this.Controls.Add(this.button_round0);
             this.Controls.Add(this.button_round9);
             this.Controls.Add(this.button_round8);
@@ -294,6 +306,7 @@
         private System.Windows.Forms.Button button_round8;
         private System.Windows.Forms.Button button_round9;
         private System.Windows.Forms.Button button_round0;
+        private System.Windows.Forms.Button button_config;
     }
 }
 

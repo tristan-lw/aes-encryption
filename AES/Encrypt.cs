@@ -37,8 +37,9 @@ namespace AES
         // Perform key expansion
         KE.Expand(Attributes.Key);
 
-            // Fill blocks
-            FillBlocks();
+        // Fill blocks
+        FillBlocks();
+        Attributes.PlaintextBlocksOriginal = plaintextBlocks;
 
             // For each block
             for (int blockNum = 0; blockNum < numberOfBlocks; blockNum++)

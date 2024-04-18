@@ -44,6 +44,10 @@ namespace AES
                 }
             }
         }
+        internal Block()
+        {
+
+        }
         internal string WriteBlock(Block block)
         {
             blockString = "";

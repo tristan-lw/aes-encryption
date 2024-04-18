@@ -21,7 +21,7 @@ namespace AES
         internal static string MixColumns { get; set; }
         internal static string AddRoundKey { get; set; }
         
-
+        internal static Block[] PlaintextBlocksOriginal { get; set; }
 
     }
 }
