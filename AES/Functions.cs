@@ -72,15 +72,16 @@ namespace AES
                 return antilogTable[255 - logB];
             }
         }
-        internal byte AffineTransformation(byte s, byte x)
+        internal byte AffineTransformation(byte MI)
         {
+            byte MI_ = MI;
             for (int i = 0; i < 4; i++)
             {
-                s = (byte)((s << 1) | (s >> 7));
-                x ^= s;
+                MI = (byte)((MI << 1) | (MI >> 7)); // shift 1 left
+                MI_ ^= MI; // XOR with previous result
             }
-            x ^= 0x63;
-            return x;
+            MI_ ^= 0x63;
+            return MI_;
         }
         internal byte Rcon(int i)
         {
@@ -118,9 +119,8 @@ namespace AES
         }
         internal byte ApplySbox(byte b)
         {
-            byte s, x;
-            s = x = MultiplicativeInverse(b);
-            return AffineTransformation(s, x);
+            byte MI = MultiplicativeInverse(b);
+            return AffineTransformation(MI);
         }
         internal Block AddRoundKey(Block block, byte[] expandedKey)
         {

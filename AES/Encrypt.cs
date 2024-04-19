@@ -71,7 +71,7 @@ namespace AES
                     {
                         Attributes.SubBytes += block.WriteBlock(block);
                     }
-                    //File.WriteAllText("C:\\Users\\Tristan\\source\\repos\\aes-encryption\\subbytes.txt", Attributes.SubBytes);
+                    //File.WriteAllText("C:\\Users\\Tristan\\source\\repos\\aes-encryption\\test.txt", Attributes.SubBytes);
 
                     // Shift rows
                     plaintextBlocks[blockNum] = func.ShiftRows(plaintextBlocks[blockNum], 0);

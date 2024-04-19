@@ -13,9 +13,9 @@ namespace AES
 {
     public partial class Main : Form
     {
-        private Format format;
-        private Encrypt encrypt;
         private bool keyInStringFormat;
+        private Format format;
+        private Encrypt encrypt; 
         private Config config;
         private Round0 round0;
         private Round1 round1;
